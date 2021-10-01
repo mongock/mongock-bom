@@ -9,6 +9,7 @@
   <version>5.0.13.RC-SNAPSHOT</version>
   <packaging>pom</packaging>
   <description>Mongock for MongoDB dependency management</description>
+  <url>https://github.com/mongock/mongock-bom</url>
 
   <properties>
     <java.version>1.8</java.version>
@@ -59,10 +60,10 @@
   </licenses>
 
   <scm>
-    <connection>scm:git:git@github.com:cloudyrock/mongock.git</connection>
-    <developerConnection>scm:git:https://github.com/cloudyrock/mongock.git</developerConnection>
-    <url>https://github.com/cloudyrock/mongock</url>
-    <tag>mongock-5.0.0-SNAPSHOT</tag>
+    <connection>scm:git:git@github.com:mongock/mongock-bom.git</connection>
+    <developerConnection>scm:git:https://github.com/mongock/mongock-bom.git</developerConnection>
+    <url>https://github.com/mongock/mongock-bom</url>
+    <tag>mongock-bom-5.0.13.RC-SNAPSHOT</tag>
   </scm>
   <developers>
     <developer>
