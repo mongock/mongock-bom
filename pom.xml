@@ -6,7 +6,7 @@
   <name>Mongock main BOM for mongodb</name>
   <artifactId>mongock-bom</artifactId>
   <groupId>io.mongock</groupId>
-  <version>5.0.13.RC-SNAPSHOT</version>
+  <version>5.0.14.RC-SNAPSHOT</version>
   <packaging>pom</packaging>
   <description>Mongock for MongoDB dependency management</description>
   <url>https://github.com/mongock/mongock-bom</url>
@@ -22,8 +22,8 @@
     <!-- CORE
     MONGOCK VERSIONS
     -->
-    <mongock.core.version>5.0.13.RC</mongock.core.version>
-    <mongock.mongodb.version>5.0.13.RC</mongock.mongodb.version>
+    <mongock.core.version>5.0.14.RC</mongock.core.version>
+    <mongock.mongodb.version>5.0.14.RC</mongock.mongodb.version>
     <!-- END MONGOCK VERSIONS -->
 
     <project.scm.id>ossrh</project.scm.id>
