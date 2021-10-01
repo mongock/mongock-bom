@@ -3,12 +3,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <name>Mongock main BOM for mongodb</name>
+  <name>Mongock main BOM for community distribution</name>
   <artifactId>mongock-bom</artifactId>
   <groupId>io.mongock</groupId>
   <version>5.0.14.RC-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <description>Mongock for MongoDB dependency management</description>
+  <description>Mongock for community dependency management</description>
   <url>https://github.com/mongock/mongock-bom</url>
 
   <properties>
