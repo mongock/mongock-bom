@@ -6,7 +6,7 @@
   <name>Mongock main BOM for community distribution</name>
   <artifactId>mongock-bom</artifactId>
   <groupId>io.mongock</groupId>
-  <version>5.0.15.RC-SNAPSHOT</version>>
+  <version>5.0.15.RC-SNAPSHOT</version>
   <packaging>pom</packaging>
   <description>Mongock for community dependency management</description>
   <url>https://github.com/mongock/mongock-bom</url>
