@@ -22,8 +22,8 @@
     <!-- CORE
     MONGOCK VERSIONS
     -->
-    <mongock.core.version>5.0.14.RC</mongock.core.version>
-    <mongock.mongodb.version>5.0.14.RC</mongock.mongodb.version>
+    <mongock.core.version>5.0.15.RC</mongock.core.version>
+    <mongock.mongodb.version>5.0.15.RC</mongock.mongodb.version>
     <!-- END MONGOCK VERSIONS -->
 
     <project.scm.id>ossrh</project.scm.id>
