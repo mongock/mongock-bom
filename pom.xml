@@ -3,12 +3,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <name>Mongock main BOM for community distribution</name>
   <artifactId>mongock-bom</artifactId>
   <groupId>io.mongock</groupId>
-  <version>5.0.15.RC-SNAPSHOT</version>
+  <version>5.0.28-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <description>Mongock for community dependency management</description>
+
+
+
+  <name>Mongock BOM</name>
+  <description>Mongock BOM for dependency management</description>
   <url>https://github.com/mongock/mongock-bom</url>
 
   <properties>
@@ -19,34 +22,47 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <maven.javadoc.failOnError>false</maven.javadoc.failOnError>
 
-    <!-- CORE
-    MONGOCK VERSIONS
-    -->
-    <mongock.core.version>5.0.15.RC</mongock.core.version>
-    <mongock.mongodb.version>5.0.15.RC</mongock.mongodb.version>
-    <!-- END MONGOCK VERSIONS -->
+
+    <mongock.community.version>5.0.27</mongock.community.version>
+    <mongock.dynamodb.version>5.0.27.BETA</mongock.dynamodb.version>
+
+
+    <mongock.pro.version>5.0.21.BETA</mongock.pro.version>
 
     <project.scm.id>ossrh</project.scm.id>
   </properties>
 
   <dependencyManagement>
     <dependencies>
-
+      <!-- COMMUNITY -->
+      <!-- Core community -->
       <dependency>
         <groupId>io.mongock</groupId>
-        <artifactId>mongock-core-bom</artifactId>
-        <version>${mongock.core.version}</version>
+        <artifactId>mongock-bom</artifactId>
+        <version>${mongock.community.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
 
+
+      <!-- DynamoDB community -->
       <dependency>
         <groupId>io.mongock</groupId>
-        <artifactId>mongock-driver-mongodb-bom</artifactId>
-        <version>${mongock.mongodb.version}</version>
+        <artifactId>mongock-driver-dynamodb-bom</artifactId>
+        <version>${mongock.dynamodb.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
+
+      <!-- PROFESSIONAL -->
+      <dependency>
+        <groupId>io.mongock.professional</groupId>
+        <artifactId>mongock-professional-bom</artifactId>
+        <version>${mongock.pro.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
     </dependencies>
   </dependencyManagement>
 
@@ -63,18 +79,33 @@
     <connection>scm:git:git@github.com:mongock/mongock-bom.git</connection>
     <developerConnection>scm:git:https://github.com/mongock/mongock-bom.git</developerConnection>
     <url>https://github.com/mongock/mongock-bom</url>
-    <tag>mongock-bom-5.0.13.RC-SNAPSHOT</tag>
+    <tag>mongock-bom-5.0.28-SNAPSHOT</tag>
   </scm>
+
   <developers>
     <developer>
       <id>dieppa</id>
       <name>Antonio Perez Dieppa</name>
+      <email>aperezdieppa@mongock.io</email>
+      <organization>Mongock</organization>
+      <organizationUrl>https://www.mongock.io</organizationUrl>
     </developer>
     <developer>
       <id>osantana85</id>
       <name>Oliver Santana Martín</name>
+      <email>osantana@mongock.io</email>
+      <organization>Mongock</organization>
+      <organizationUrl>https://www.mongock.io</organizationUrl>
+    </developer>
+    <developer>
+      <id>dhivesh</id>
+      <name>Dhivesh Sadhwani</name>
+      <email>dhivesh.sadhwani@mongock.io</email>
+      <organization>Mongock</organization>
+      <organizationUrl>https://www.mongock.io</organizationUrl>
     </developer>
   </developers>
+
 
   <distributionManagement>
     <snapshotRepository>
@@ -86,6 +117,7 @@
       <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
   </distributionManagement>
+
 
   <build>
     <plugins>
@@ -173,97 +205,7 @@
   </build>
 
   <profiles>
-
-    <profile>
-      <id>it</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>3.0.0-M4</version>
-            <configuration>
-              <skipTests>false</skipTests>
-              <excludes>
-                <exclude>**/*ITest.java</exclude>
-              </excludes>
-            </configuration>
-            <executions>
-              <execution>
-                <id>integration-test</id>
-                <goals>
-                  <goal>test</goal>
-                </goals>
-                <phase>integration-test</phase>
-                <configuration>
-                  <excludes>
-                    <exclude>none</exclude>
-                  </excludes>
-                  <includes>
-                    <include>**/*ITest.java</include>
-                  </includes>
-                </configuration>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-
-    <profile>
-      <id>only-unit</id>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>3.0.0-M4</version>
-            <configuration>
-              <skipTests>false</skipTests>
-              <excludes>
-                <exclude>**/*ITest.java</exclude>
-              </excludes>
-            </configuration>
-            <executions>
-              <execution>
-                <id>integration-test</id>
-                <goals>
-                  <goal>test</goal>
-                </goals>
-                <phase>integration-test</phase>
-                <configuration>
-                  <excludes>
-                    <exclude>**/*ITest.java</exclude>
-                  </excludes>
-                </configuration>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-
-    <profile>
-      <id>no-test</id>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>3.0.0-M4</version>
-            <configuration>
-              <skipTests>true</skipTests>
-            </configuration>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-
-
-    <!-- GPG Signature on release -->
+   <!-- GPG Signature on release -->
     <profile>
       <id>release-sign-artifacts</id>
       <activation>
