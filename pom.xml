@@ -23,7 +23,7 @@
     <maven.javadoc.failOnError>false</maven.javadoc.failOnError>
 
 
-    <mongock.community.version>5.0.28</mongock.community.version>
+    <mongock.community.version>5.0.29</mongock.community.version>
     <mongock.dynamodb.version>5.0.28.BETA</mongock.dynamodb.version>
 
 
