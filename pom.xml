@@ -5,7 +5,7 @@
 
   <artifactId>mongock-bom</artifactId>
   <groupId>io.mongock</groupId>
-  <version>5.0.29-SNAPSHOT</version>
+  <version>5.0.30-SNAPSHOT</version>
   <packaging>pom</packaging>
 
 
