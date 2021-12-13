@@ -5,7 +5,7 @@
 
   <artifactId>mongock-bom</artifactId>
   <groupId>io.mongock</groupId>
-  <version>5.0.30-SNAPSHOT</version>
+  <version>5.0.31-SNAPSHOT</version>
   <packaging>pom</packaging>
 
 
@@ -22,12 +22,9 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <maven.javadoc.failOnError>false</maven.javadoc.failOnError>
 
-
-    <mongock.community.version>5.0.30</mongock.community.version>
-    <mongock.dynamodb.version>5.0.28.BETA</mongock.dynamodb.version>
-
-
-    <mongock.pro.version>5.0.21.BETA</mongock.pro.version>
+    <mongock.community.version>5.0.31</mongock.community.version>
+    <mongock.dynamodb.version>5.0.29.BETA</mongock.dynamodb.version>
+    <mongock.pro.version>5.0.22.BETA</mongock.pro.version>
 
     <project.scm.id>ossrh</project.scm.id>
   </properties>
