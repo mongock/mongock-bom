@@ -22,9 +22,9 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <maven.javadoc.failOnError>false</maven.javadoc.failOnError>
 
-    <mongock.community.version>5.0.37-SNAPSHOT</mongock.community.version>
-    <mongock.dynamodb.version>5.0.37.BETA-SNAPSHOT</mongock.dynamodb.version>
-    <mongock.pro.version>5.0.28.BETA-SNAPSHOT</mongock.pro.version>
+    <mongock.community.version>5.0.37</mongock.community.version>
+    <mongock.dynamodb.version>5.0.37.BETA</mongock.dynamodb.version>
+    <mongock.pro.version>5.0.27.BETA</mongock.pro.version>
 
     <project.scm.id>ossrh</project.scm.id>
   </properties>
