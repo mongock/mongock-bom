@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - mongock_maven_server
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -28,6 +29,7 @@ jobs:
           gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
           gpg-passphrase: GPG_PASSPHRASE
 
+
       - name: Configure Git User
         run: |
           git config user.email "actions@github.com"
@@ -40,14 +42,19 @@ jobs:
         env:
           GPG_SIGNING_PRIVATE_KEY: ${{ secrets.GPG_SIGNING_PRIVATE_KEY }}
 
-      - name: Publish to Maven Central
-        run: ./release-github.sh
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          MAVEN_USERNAME: ${{ secrets.NEXUS_USER }}
-          MAVEN_CENTRAL_TOKEN: ${{ secrets.NEXUS_PASSWORD }}
-          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
-          GPG_SIGNING_PRIVATE_KEY: ${{ secrets.GPG_SIGNING_PRIVATE_KEY }}
+      - name: Cat settings
+        run: |
+          cat ~/.m2/settings.xml
+
+
+#      - name: Publish to Maven Central
+#        run: ./release-github.sh
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#          MAVEN_USERNAME: ${{ secrets.NEXUS_USER }}
+#          MAVEN_CENTRAL_TOKEN: ${{ secrets.NEXUS_PASSWORD }}
+#          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+#          GPG_SIGNING_PRIVATE_KEY: ${{ secrets.GPG_SIGNING_PRIVATE_KEY }}
 
 #      - name: Synchronizing develop branch
 #        run: |
