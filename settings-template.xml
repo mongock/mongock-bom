@@ -1,0 +1,28 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <servers>
+        <server>
+            <id>ossrh</id>
+            <username>${env.MAVEN_USERNAME}</username>
+            <password>${env.MAVEN_CENTRAL_TOKEN}</password>
+        </server>
+        <server>
+            <id>gpg.passphrase</id>
+            <passphrase>${env.GPG_PASSPHRASE}</passphrase>
+        </server>
+
+        <server>
+            <id>mongock-maven-server</id>
+            <configuration>
+                <httpHeaders>
+                    <property>
+                        <name>Mongock-Authentication</name>
+                        <value>6ebeb20d-497f-405c-83ba-1d99b659d7d0</value>
+                    </property>
+                </httpHeaders>
+            </configuration>
+        </server>
+
+    </servers>
+</settings>

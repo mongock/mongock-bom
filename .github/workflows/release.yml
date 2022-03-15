@@ -42,9 +42,12 @@ jobs:
         env:
           GPG_SIGNING_PRIVATE_KEY: ${{ secrets.GPG_SIGNING_PRIVATE_KEY }}
 
+      - name: Override settings
+        run: |
+          cp -f ./settings-template.xml ~/.m2/settings.xml
+
       - name: Cat settings
         run: |
-          ls -l
           cat ~/.m2/settings.xml
 
 
