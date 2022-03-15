@@ -44,7 +44,7 @@ jobs:
 
       - name: Cat settings
         run: |
-          cat ~/.m2/settings.xml
+          ls -l
 
 
 #      - name: Publish to Maven Central
