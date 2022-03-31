@@ -23,7 +23,6 @@
     <maven.javadoc.failOnError>false</maven.javadoc.failOnError>
 
     <mongock.community.version>5.0.39-SNAPSHOT</mongock.community.version>
-    <mongock.dynamodb.version>5.0.39.BETA-SNAPSHOT</mongock.dynamodb.version>
     <mongock.pro.version>5.0.29.BETA-SNAPSHOT</mongock.pro.version>
 
     <project.scm.id>ossrh</project.scm.id>
@@ -32,21 +31,10 @@
   <dependencyManagement>
     <dependencies>
       <!-- COMMUNITY -->
-      <!-- Core community -->
       <dependency>
         <groupId>io.mongock</groupId>
         <artifactId>mongock-community-bom</artifactId>
         <version>${mongock.community.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-
-
-      <!-- DynamoDB community -->
-      <dependency>
-        <groupId>io.mongock</groupId>
-        <artifactId>mongock-driver-dynamodb-bom</artifactId>
-        <version>${mongock.dynamodb.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
