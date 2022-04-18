@@ -5,7 +5,7 @@
 
   <groupId>io.mongock</groupId>
   <artifactId>mongock-bom</artifactId>
-  <version>5.0.40-SNAPSHOT</version>
+  <version>5.0.41-SNAPSHOT</version>
   <packaging>pom</packaging>
 
 
@@ -22,8 +22,8 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <maven.javadoc.failOnError>false</maven.javadoc.failOnError>
 
-    <mongock.community.version>5.0.39</mongock.community.version>
-    <mongock.pro.version>5.0.29</mongock.pro.version>
+    <mongock.community.version>5.0.40-SNAPSHOT</mongock.community.version>
+    <mongock.pro.version>5.0.30-SNAPSHOT</mongock.pro.version>
 
     <project.scm.id>ossrh</project.scm.id>
   </properties>
