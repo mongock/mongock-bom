@@ -60,6 +60,11 @@
         <artifactId>mongock-springboot-v3</artifactId>
         <version>${mongock.community-jdk17.version}</version>
       </dependency>
+      <dependency>
+        <groupId>io.mongock</groupId>
+        <artifactId>couchbase-springboot-v3-driver</artifactId>
+        <version>${mongock.community-jdk17.version}</version>
+      </dependency>
 
     </dependencies>
   </dependencyManagement>
