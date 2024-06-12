@@ -5,7 +5,7 @@
 
   <groupId>io.mongock</groupId>
   <artifactId>mongock-bom</artifactId>
-  <version>5.4.3-SNAPSHOT</version>
+  <version>5.4.4-SNAPSHOT</version>
   <packaging>pom</packaging>
 
 
@@ -22,9 +22,9 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <maven.javadoc.failOnError>false</maven.javadoc.failOnError>
 
-    <mongock.community.version>5.4.3</mongock.community.version>
-    <mongock.community-jdk17.version>5.4.3</mongock.community-jdk17.version>
-    <mongock.pro.version>5.4.3</mongock.pro.version>
+    <mongock.community.version>5.4.4</mongock.community.version>
+    <mongock.community-jdk17.version>5.4.4</mongock.community-jdk17.version>
+    <mongock.pro.version>5.4.4</mongock.pro.version>
 
     <project.scm.id>ossrh</project.scm.id>
   </properties>
@@ -82,7 +82,7 @@
     <connection>scm:git:git@github.com:mongock/mongock-bom.git</connection>
     <developerConnection>scm:git:https://github.com/mongock/mongock-bom.git</developerConnection>
     <url>https://github.com/mongock/mongock-bom</url>
-    <tag>mongock-bom-5.4.3-SNAPSHOT</tag>
+    <tag>mongock-bom-5.4.4-SNAPSHOT</tag>
   </scm>
 
   <developers>
